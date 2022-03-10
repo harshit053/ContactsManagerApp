@@ -4,18 +4,18 @@
     <h1>Sign In</h1>
     <h3>Don't have an account? <a href="signup">Sign Up</a></h3>
 
-    <form action="/signup" method="POST">
+    <form action="/signin" method="POST">
         <div class="mb-3">
             <label for="emailid" class="form-label">Email</label>
-            <input type="email" class="form-control" id="emailid">
+            <input type="email" name="username" class="form-control" id="emailid">
         </div>
     
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password">
+            <input type="password" name="password" class="form-control" id="password">
         </div>
         
-        <input type="submit" class="btn btn-primary" value="Signup">
+        <input type="submit" class="btn btn-primary" value="Sign In">
     </form>
     
 </div>

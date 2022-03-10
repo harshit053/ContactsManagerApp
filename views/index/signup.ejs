@@ -1,0 +1,29 @@
+<%- include ("../partials/header") %>
+
+<div class="form-container">
+    <h1>Sign Up</h1>
+    <h3>Already have an account? <a href="signin">Sign in</a></h3>
+
+    <form action="/signup" method="POST">
+        <div class="mb-3">
+            <label for="emailid" class="form-label">Email</label>
+            <input type="email" class="form-control" id="emailid">
+        </div>
+    
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+    
+        <div class="mb-3">
+            <label for="secret" class="form-label">Secret</label>
+            <input type="text" class="form-control" id="secret">
+        </div>
+        
+        <input type="submit" class="btn btn-primary" value="Sign Up">
+    </form>
+    <p class="terms">By clicking the "Sign Up" button, you are creating an account and you agree to the Terms of Use</p>
+    
+</div>
+
+<%- include ("../partials/footer") %>

@@ -4,6 +4,7 @@ const express       = require("express"),
       passport      = require("passport"),
       LocalStrategy = require("passport-local"),
       User          = require("./models/user");
+      Contact       = require("./models/contact")
 
 const app = express();
 
@@ -27,7 +28,6 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-
 
 
 app.get("/signup", function(req, res) {
@@ -57,8 +57,34 @@ app.post("/signin", passport.authenticate("local",
     }), function(req, res) {
 });
 
-app.get("/contacts", function(req, res) {
-    res.render("index/contacts");
+app.get("/contacts", isLoggedIn, function(req, res) {
+    Contact.find({}, function(err, contacts) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render("index/contacts", {contacts: contacts, currentUser: req.user});
+        }
+    })
+    
+});
+
+app.post("/contacts", isLoggedIn, function(req, res) {
+    var name = req.body.name;
+    var phno = req.body.phno;
+    var email = req.body.email;
+    var author = {
+        id: req.user._id
+    };
+    var newContact = {name: name, phno: phno, email: email, author: author};
+
+    Contact.create(newContact, function(err, newlyCreatedContact) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect("/contacts");
+        }
+    });
+
 });
 
 app.get("/signout", function(req, res){
@@ -66,7 +92,12 @@ app.get("/signout", function(req, res){
     res.redirect("/signin");
 });
 
-
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/signin");
+}
 
 var port = process.env.PORT || 3000;
 app.listen(port, process.env.IP, function() {

@@ -1,6 +1,51 @@
 <%- include ("../partials/header") %>
 
-<h1>this is the contacts page</h1>
-<a class="btn btn-primary" href="/signout" role="button">Sign Out</a>
+<div class="form-container">
+    <h1>Contact Form and Contact List Page</h1>
+
+    <form action="/contacts" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="name">
+        </div>
+    
+        <div class="mb-3">
+            <label for="phno" class="form-label">Phone Number</label>
+            <input type="tel" name="phno" class="form-control" id="phno">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email">
+        </div>
+        
+        <input type="submit" class="btn btn-primary" value="Save">
+    </form>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% contacts.forEach(function(contact){ %>
+              <% if(currentUser && contact.author.id.equals(currentUser._id)) { %>
+                <tr>
+                  <td><%= contact.name %></td>
+                  <td><%= contact.phno %></td>
+                  <td><%= contact.email %></td>
+                </tr>
+              <% } %>
+          <% }); %>
+        </tbody>
+    </table>
+    
+    <a class="btn btn-primary" href="/signout" role="button">Sign Out</a>
+</div>
+
+
 
 <%- include ("../partials/footer") %>

@@ -31,7 +31,7 @@ a {
 
 .btn {
     width: 350px;
-    margin-top: 16px;
+    margin: 16px 0;
 }
 
 .terms {
@@ -39,4 +39,9 @@ a {
     color: gray;
     width: 350px;
     text-align: center;
+}
+
+.table {
+    width: 60%;
+    margin: 30px 0;
 }

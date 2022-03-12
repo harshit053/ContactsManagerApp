@@ -4,7 +4,8 @@
   "description": "Contacts Manager Application with login and signup",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Harshit Gupta",
   "license": "ISC",

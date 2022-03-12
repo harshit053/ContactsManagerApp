@@ -55,7 +55,7 @@ Alternatively you can also visit https://contacts-management.herokuapp.com/signu
 
     * user.js - contains mongoose schema for the users of this application.
 
-* The views/index directory the HTML markup for showing the Sign In, Sign Up and Contacts form and Contacts List pages
+* The views/index directory contains the HTML markup for showing the Sign In, Sign Up and Contacts form and Contacts List pages
 
 * The views/partials directory contains the header and footer sections of the HTML boilerplate.
 

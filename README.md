@@ -63,8 +63,8 @@ Alternatively you can also visit https://contacts-management.herokuapp.com/ to s
 
 ## Screenshots
 
-![Contact Form and Contact List Page](https://drive.google.com/file/d/1Ppsdnk6nmlMX5LeYoL4TzxWaxeOvSnW6/view?usp=sharing)
+![Contact Form and Contact List Page](https://drive.google.com/uc?export=view&id=1Ppsdnk6nmlMX5LeYoL4TzxWaxeOvSnW6)
 
-![Sign In Page](https://drive.google.com/file/d/1rfeRGs4xPpk1gy2J3FUYbh__GTmKSV0D/view?usp=sharing)
+![Sign In Page](https://drive.google.com/uc?export=view&id=1rfeRGs4xPpk1gy2J3FUYbh__GTmKSV0D)
 
-![Sign Up Page](https://drive.google.com/file/d/16MuMvX4iuqbYeyxcDQ3Jo87Wq1aPxE7m/view?usp=sharing)
+![Sign Up Page](https://drive.google.com/uc?export=view&id=16MuMvX4iuqbYeyxcDQ3Jo87Wq1aPxE7m)

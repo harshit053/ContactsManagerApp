@@ -30,7 +30,7 @@ localhost:3000/signup
 ``` 
 
 
-Alternatively you can also visit https://contacts-management.herokuapp.com/ to see the deployed application.
+Alternatively you can also visit https://contacts-management.herokuapp.com/signup to see the deployed application.
 
 ## Description of various code blocks 
 
